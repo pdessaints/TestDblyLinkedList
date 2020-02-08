@@ -1,0 +1,52 @@
+version: '2'
+
+services:
+    php:
+        image: registry.phpcreation.com/php73-nginx:latest
+#        build:
+#          context: .
+#          dockerfile: ./docker/php/Dockerfile
+#        image: registry.phpcreation.com/phpc_project/ludik-phpr-shopify/php:113
+#        ports:
+#            - "80:80"
+        volumes:
+            - ./:/code
+            - ./tmp:/tmp
+        tmpfs:
+            - /run
+        ports:
+            - "80:80"
+        environment:
+#            SYMFONY__REDIS__DSN__DEFAULT: redis://redis/0
+#            SYMFONY__REDIS__DSN__CACHE: redis://redis/1
+#            SYMFONY__CONFIG__DSN: "mysql:host=db;dbname=config"
+#            SYMFONY__CONFIG__USER: root
+#            SYMFONY__CONFIG__PASSWORD: root
+#            SYMFONY__RABBITMQ__HOST: rabbitmq
+#            SYMFONY__RABBITMQ__USER: rabbitmq
+#            SYMFONY__RABBITMQ__PASS: rabbitmq
+            SYMFONY_ENV: dev
+#            TENANT: local
+            VIRTUAL_PORT: 80
+            VIRTUAL_HOST: .phpcreation.docker
+            PHP_UID: 1000 #  id -u
+            TEMP_FOLDER: /tmp
+            ### XDEBUG ###
+            XDEBUG_CONFIG: "remote_host=127.0.0.1" # use localHost 127.0.0.1
+            PHP_IDE_CONFIG: "serverName=localhost" # must be the same as Xdebug config and how the browser call the app
+            ENABLE_XDEBUG: 1 # app_1 | [+] Enabling XDebug
+
+#    nginx:
+##        image: nginx:latest
+#        build:
+#          context: .
+#          dockerfile: ./docker/nginx/Dockerfile
+#        ports:
+#            - "80:80"
+#        volumes:
+#            - ./:/code
+#            - /tmp
+#        depends_on:
+#            - php
+
+

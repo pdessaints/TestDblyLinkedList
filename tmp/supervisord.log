@@ -1,0 +1,20 @@
+2020-02-08 16:21:17,432 CRIT Supervisor running as root (no user in config file)
+2020-02-08 16:21:17,454 INFO RPC interface 'supervisor' initialized
+2020-02-08 16:21:17,455 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2020-02-08 16:21:17,460 INFO supervisord started with pid 1
+2020-02-08 16:21:18,474 INFO spawned: 'nginx' with pid 78
+2020-02-08 16:21:18,479 INFO spawned: 'php-fpm' with pid 79
+2020-02-08 16:21:19,600 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-08 16:21:19,602 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-08 16:22:42,264 WARN received SIGTERM indicating exit request
+2020-02-08 16:22:42,265 INFO waiting for nginx, php-fpm to die
+2020-02-08 16:22:42,277 INFO stopped: php-fpm (exit status 0)
+2020-02-08 16:22:42,284 INFO stopped: nginx (exit status 0)
+2020-02-08 16:22:49,197 CRIT Supervisor running as root (no user in config file)
+2020-02-08 16:22:49,226 INFO RPC interface 'supervisor' initialized
+2020-02-08 16:22:49,227 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2020-02-08 16:22:49,232 INFO supervisord started with pid 1
+2020-02-08 16:22:50,244 INFO spawned: 'nginx' with pid 77
+2020-02-08 16:22:50,264 INFO spawned: 'php-fpm' with pid 86
+2020-02-08 16:22:51,482 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-08 16:22:51,484 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
